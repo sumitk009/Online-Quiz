@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -8,7 +9,8 @@
 body{
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(to right bottom, rgb(5, 75, 5), rgba(109, 49, 0, 0.803), rgb(61, 255, 64));
+    background: linear-gradient(to right bottom, rgb(0, 103, 0), rgba(89, 40, 0, 0.89), rgb(61, 255, 64));
+    /* background: url("https://cdn.pixabay.com/photo/2021/06/02/18/04/education-6305113_1280.jpg"); */
     color: white;
     display: grid;
     place-items: center;
@@ -89,7 +91,7 @@ body{
     background-color: rgb(1, 43, 111);
 }
 .choise .selected{
-    background-color: blue;
+    background-color: orange;
     color: white;
 }
 .scoreCard{
