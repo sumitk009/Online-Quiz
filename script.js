@@ -12,27 +12,51 @@ const timer = document.querySelector('.timer');
 
 const quiz = [
     {
-        question:"Q. Which among the following is the brightest planet?",
-        choise: ["Mercury", "Venus", "Mars", "Neptune"],
-        answer: "Venus",
+        question:"Q. C++ does not supports the following",
+        choise: ["Multilevel inheritance", "Hierarchical inheritance", "Hybrid inheritance", "None of these"],
+        answer: "None of these",
 
     },
     {
-        question:"Q. Which among the  following is the nearest to earth planet?",
-        choise: ["Venus", "Mars", "Neptune", "Mercury"],
-        answer: "Venus",
+        question:"Q. 'cin' is an .........",
+        choise: ["Class", "Object", "Package", "Namespace"],
+        answer: "Object",
 
     },
     {
-        question:"Q. Indian Institute of Chemical Biology is located in ......",
-        choise: ["Nagpur", "Kolkata", "Hyderabad", "Bhopal"],
-        answer: "Kolkata",
+        question:"Q. The following operator can be used to calculate the value of one number raised to another.",
+        choise: ["^", "**", "^^", "None of the above"],
+        answer: "None of the above",
 
     },
     {
-        question:"Q. Red Indian is a tribe to .....",
-        choise: ["Africa", "South America", "North America", "Asia"],
-        answer: "North America",
+        question:"Q. Following is the invalid inclusion of a file to the current program. Identify it",
+        choise: ["#include <file>", "#include 'file'", "#include <file", "All of the above are invalid"],
+        answer: "#include <file",
+
+    },
+    {
+        question:"Q. C++ is a __________ programming language.",
+        choise: ["general-purpose", "procedural and functional", "object-oriented, generic and modular", "All of the above"],
+        answer: "All of the above",
+
+    },
+    {
+        question:"Q. Who was developed C++",
+        choise: ["Bjarne Stroustrup", "Dennis Ritchie", "Guido van Rossum", "James Gosling"],
+        answer: "Bjarne Stroustrup",
+
+    },
+    {
+        question:"Q. When C++ was developed?",
+        choise: ["1975", "1976", "1979", "1980"],
+        answer: "1979",
+
+    },
+    {
+        question:"Q. 'cout' stands for ........",
+        choise: ["character input", "character output", "Both of above", "None of the above"],
+        answer: "character output",
 
     },
 ];
@@ -193,4 +217,3 @@ nBTN.addEventListener('click', ()=>{
     }
    
 });
-
