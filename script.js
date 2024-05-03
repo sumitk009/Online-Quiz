@@ -697,3 +697,8 @@ document.addEventListener('visibilitychange', function () {
       }
   }
 });
+function startQuiz() {
+  document.getElementById("homepage").style.display = "none";
+  document.getElementById("quiz-container").style.display = "block";
+  // Add any additional initialization logic here
+}
