@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Quiz</title>
-    
-    <link rel="stylesheet" href="style.css">
+    <title>Quiz</title>
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="alert">Alert</div>
-    <div class="btn startBTN">Start</div>
-    <div class="container">
-        <h1>C++ Online Quiz</h1>
-        <div class="question"></div>
-        <div class="choise"></div>
-        <button class="btn nBTN">Next</button>
-        <div class="scoreCard"></div>
-        <div class="timer"></div>
+    <div class="quiz-container">
+        <h1>Fun Quiz</h1>
+        <div id="question-container"></div>
+        <div id="options-container"></div>
+        <center>
+            <button id="submit-button" class="option-button">Submit</button>
+            <button id="next-button" class="option-button">Next</button>
+        </center>
+        <div id="result-container"></div>
     </div>
-    <script src="script.js"></script>
+
+<script src="script.js"></script>
+   
 </body>
 </html>
