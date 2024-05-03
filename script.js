@@ -702,3 +702,48 @@ function startQuiz() {
   document.getElementById("quiz-container").style.display = "block";
   // Add any additional initialization logic here
 }
+
+// Initialize an array to store user responses
+let userResponses = [];
+
+function selectOption(selectedOption, correctAnswer) {
+    if (!isAnswered) {
+        const options = optionsContainer.querySelectorAll('.option-button');
+        options.forEach(option => {
+            if (option.innerText === selectedOption) {
+                if (selectedOption === correctAnswer) {
+                    score++;
+                    option.classList.add('correct');
+                    userResponses.push({ question: questionContainer.innerText, selectedAnswer: selectedOption, result: 'Correct' });
+                } else {
+                    option.classList.add('wrong');
+                    userResponses.push({ question: questionContainer.innerText, selectedAnswer: selectedOption, result: 'Wrong' });
+                }
+            } else if (option.innerText === correctAnswer) {
+                option.classList.add('correct');
+            }
+        });
+        isAnswered = true;
+        submitButton.style.display = 'none';
+        nextButton.style.display = 'block';
+    }
+}
+
+function showResult() {
+    questionContainer.innerText = '';
+    optionsContainer.innerHTML = '';
+    resultContainer.innerText = `You scored ${score} out of ${quizData.length}.`;
+    submitButton.style.display = 'none';
+    nextButton.style.display = 'none';
+
+    // Display the user's responses
+    userResponses.forEach(response => {
+        resultContainer.innerHTML += `<p><strong>Question:</strong> ${response.question}</p>`;
+        resultContainer.innerHTML += `<p><strong>Your Answer:</strong> ${response.selectedAnswer}</p>`;
+        resultContainer.innerHTML += `<p><strong>Result:</strong> ${response.result}</p>`;
+        resultContainer.innerHTML += '<hr>';
+    });
+}
+
+
+
