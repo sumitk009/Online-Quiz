@@ -744,6 +744,35 @@ function showResult() {
         resultContainer.innerHTML += '<hr>';
     });
 }
+function showResult() {
+  questionContainer.innerText = '';
+  optionsContainer.innerHTML = '';
+
+  // Initialize counters for correct and incorrect answers
+  let correctCount = 0;
+  let incorrectCount = 0;
+  
+  // Iterate over user responses to count correct and incorrect answers
+  userResponses.forEach(response => {
+      if (response.result === 'Correct') {
+          correctCount++;
+      } else {
+          incorrectCount++;
+      }
+
+      // Display each question and user's response
+      resultContainer.innerHTML += `<p><strong>Question:</strong> ${response.question}</p>`;
+      resultContainer.innerHTML += `<p><strong>Your Answer:</strong> ${response.selectedAnswer}</p>`;
+      resultContainer.innerHTML += `<p><strong>Result:</strong> ${response.result}</p>`;
+      resultContainer.innerHTML += '<hr>';
+  });
+
+  // Display user's score along with total correct and incorrect answers
+  resultContainer.innerHTML += `<p>You scored ${score} out of ${quizData.length}.</p>`;
+  resultContainer.innerHTML += `<p>Total Correct Answers: ${correctCount}</p>`;
+  resultContainer.innerHTML += `<p>Total Incorrect Answers: ${incorrectCount}</p>`;
+}
+
 
 
 
